@@ -59,9 +59,9 @@ const LoginRegister = () => {
         <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
           <div className="mb-8">
             <h1 className="text-5xl font-bold mb-4">🚗 ViaAutoPro</h1>
-            <p className="text-2xl text-orange-100 mb-6">O maior portal de veículos do Brasil</p>
+            <p className="text-2xl text-orange-100 mb-6">Marketplace B2B para o Mercado Automotivo</p>
             <p className="text-lg text-orange-50 leading-relaxed">
-              Conectamos compradores e vendedores de forma rápida, segura e profissional.
+              Conectamos <strong>lojistas profissionais</strong> com vendedores particulares. Encontre veículos com margem de revenda direto na plataforma.
             </p>
           </div>
 
@@ -74,8 +74,8 @@ const LoginRegister = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Catálogo Completo</h3>
-                <p className="text-orange-100 text-sm">Milhares de veículos disponíveis para você escolher</p>
+                <h3 className="font-semibold text-lg">💼 Para Lojistas</h3>
+                <p className="text-orange-100 text-sm">Acesse milhares de veículos de particulares com margem de revenda garantida</p>
               </div>
             </div>
 
@@ -86,8 +86,8 @@ const LoginRegister = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Contato Direto</h3>
-                <p className="text-orange-100 text-sm">Negocie diretamente com os vendedores via WhatsApp</p>
+                <h3 className="font-semibold text-lg">🤝 Negociação Direta</h3>
+                <p className="text-orange-100 text-sm">Contato direto com vendedores via WhatsApp para fechar negócios rapidamente</p>
               </div>
             </div>
 
@@ -98,8 +98,8 @@ const LoginRegister = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Planos Acessíveis</h3>
-                <p className="text-orange-100 text-sm">A partir de R$ 379,90/mês com acesso total</p>
+                <h3 className="font-semibold text-lg">📊 Planos Profissionais</h3>
+                <p className="text-orange-100 text-sm">A partir de R$ 379,90/mês - Investimento que se paga em uma venda</p>
               </div>
             </div>
 
@@ -110,8 +110,8 @@ const LoginRegister = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Para Vendedores</h3>
-                <p className="text-orange-100 text-sm">Cadastre seus veículos gratuitamente e alcance milhares de compradores</p>
+                <h3 className="font-semibold text-lg">🚙 Para Vendedores</h3>
+                <p className="text-orange-100 text-sm">Cadastre GRÁTIS e venda seu veículo para lojistas de todo Brasil</p>
               </div>
             </div>
           </div>
@@ -123,8 +123,8 @@ const LoginRegister = () => {
               <div className="text-orange-100 text-sm">Veículos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold">500+</div>
-              <div className="text-orange-100 text-sm">Vendedores</div>
+              <div className="text-3xl font-bold">200+</div>
+              <div className="text-orange-100 text-sm">Lojistas</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold">24/7</div>
