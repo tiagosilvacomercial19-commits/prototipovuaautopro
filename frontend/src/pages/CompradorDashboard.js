@@ -124,8 +124,8 @@ const CompradorDashboard = () => {
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2" data-testid="catalogo-title">Catálogo de Veículos</h1>
-        <p className="text-gray-600 mb-6">Encontre o veículo ideal para você</p>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2" data-testid="catalogo-title">Catálogo de Veículos de Particulares</h1>
+        <p className="text-gray-600 mb-6">Encontre veículos com margem de revenda para sua loja</p>
 
         {getSubscriptionBanner()}
 
