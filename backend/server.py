@@ -185,7 +185,7 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return user
 
-async def require_role(required_role: str):
+def require_role(required_role: str):
     async def role_checker(current_user: dict = Depends(get_current_user)):
         if current_user['role'] != required_role:
             raise HTTPException(status_code=403, detail="Acesso negado")
