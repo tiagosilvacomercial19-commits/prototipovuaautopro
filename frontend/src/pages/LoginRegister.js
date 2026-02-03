@@ -272,12 +272,37 @@ const LoginRegister = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
             data-testid="submit-button"
           >
             {loading ? 'Processando...' : isLogin ? 'Entrar' : 'Cadastrar'}
           </button>
-        </form>
+
+          {/* Additional Info */}
+          {isLogin ? (
+            <p className="text-center text-sm text-gray-600 mt-4">
+              Não tem uma conta?{' '}
+              <button
+                type="button"
+                onClick={() => setIsLogin(false)}
+                className="text-orange-600 font-semibold hover:text-orange-700"
+              >
+                Cadastre-se grátis
+              </button>
+            </p>
+          ) : (
+            <p className="text-center text-sm text-gray-600 mt-4">
+              Já tem uma conta?{' '}
+              <button
+                type="button"
+                onClick={() => setIsLogin(true)}
+                className="text-orange-600 font-semibold hover:text-orange-700"
+              >
+                Faça login
+              </button>
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
