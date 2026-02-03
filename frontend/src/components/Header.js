@@ -17,7 +17,7 @@ const Header = () => {
             <div className="text-right">
               <p className="font-semibold" data-testid="user-name">{user?.nome}</p>
               <p className="text-orange-100 text-sm">
-                {user?.role === 'vendedor' ? '🔧 Vendedor' : '🛒 Comprador'}
+                {user?.role === 'vendedor' ? '🚙 Vendedor Particular' : '💼 Lojista'}
               </p>
             </div>
             <button
