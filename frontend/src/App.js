@@ -1,53 +1,99 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import '@/App.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LoginRegister from '@/pages/LoginRegister';
+import VendedorDashboard from '@/pages/VendedorDashboard';
+import CompradorDashboard from '@/pages/CompradorDashboard';
+import PlansPage from '@/pages/PlansPage';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const Home = () => {
-  const helloWorldApi = async () => {
+// Auth Context
+export const AuthContext = React.createContext();
+
+function App() {
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem('token'));
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (token) {
+      fetchCurrentUser();
+    } else {
+      setLoading(false);
+    }
+  }, [token]);
+
+  const fetchCurrentUser = async () => {
     try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
+      const response = await fetch(`${API}/auth/me`, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        setUser(data);
+      } else {
+        logout();
+      }
+    } catch (error) {
+      console.error('Error fetching user:', error);
+      logout();
+    } finally {
+      setLoading(false);
     }
   };
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+  const login = (newToken, newUser) => {
+    localStorage.setItem('token', newToken);
+    setToken(newToken);
+    setUser(newUser);
+  };
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    setToken(null);
+    setUser(null);
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-xl text-gray-600">Carregando...</div>
+      </div>
+    );
+  }
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <AuthContext.Provider value={{ user, token, login, logout, API }}>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={
+              user ? <Navigate to="/dashboard" /> : <LoginRegister />
+            } />
+            
+            <Route path="/dashboard" element={
+              !user ? <Navigate to="/login" /> :
+              user.role === 'vendedor' ? <VendedorDashboard /> :
+              user.role === 'comprador' ? <CompradorDashboard /> :
+              <div>Role desconhecido</div>
+            } />
+            
+            <Route path="/planos" element={
+              !user ? <Navigate to="/login" /> :
+              user.role === 'comprador' ? <PlansPage /> :
+              <Navigate to="/dashboard" />
+            } />
+            
+            <Route path="/" element={<Navigate to={user ? "/dashboard" : "/login"} />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </AuthContext.Provider>
   );
 }
 
