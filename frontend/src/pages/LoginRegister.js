@@ -53,12 +53,92 @@ const LoginRegister = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-orange-600 mb-2">ViaAutoPro</h1>
-          <p className="text-gray-600">Portal de Veículos</p>
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-6xl overflow-hidden flex flex-col md:flex-row">
+        
+        {/* Left Side - Presentation */}
+        <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+          <div className="mb-8">
+            <h1 className="text-5xl font-bold mb-4">🚗 ViaAutoPro</h1>
+            <p className="text-2xl text-orange-100 mb-6">O maior portal de veículos do Brasil</p>
+            <p className="text-lg text-orange-50 leading-relaxed">
+              Conectamos compradores e vendedores de forma rápida, segura e profissional.
+            </p>
+          </div>
+
+          {/* Features */}
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+              <div className="bg-white/20 rounded-full p-2 mt-1">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Catálogo Completo</h3>
+                <p className="text-orange-100 text-sm">Milhares de veículos disponíveis para você escolher</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="bg-white/20 rounded-full p-2 mt-1">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Contato Direto</h3>
+                <p className="text-orange-100 text-sm">Negocie diretamente com os vendedores via WhatsApp</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="bg-white/20 rounded-full p-2 mt-1">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Planos Acessíveis</h3>
+                <p className="text-orange-100 text-sm">A partir de R$ 379,90/mês com acesso total</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="bg-white/20 rounded-full p-2 mt-1">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Para Vendedores</h3>
+                <p className="text-orange-100 text-sm">Cadastre seus veículos gratuitamente e alcance milhares de compradores</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/20">
+            <div className="text-center">
+              <div className="text-3xl font-bold">1000+</div>
+              <div className="text-orange-100 text-sm">Veículos</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">500+</div>
+              <div className="text-orange-100 text-sm">Vendedores</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">24/7</div>
+              <div className="text-orange-100 text-sm">Disponível</div>
+            </div>
+          </div>
         </div>
+
+        {/* Right Side - Form */}
+        <div className="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+          {/* Logo Mobile */}
+          <div className="text-center mb-6 md:hidden">
+            <h1 className="text-3xl font-bold text-orange-600 mb-2">ViaAutoPro</h1>
+          </div>
 
         {/* Tabs */}
         <div className="flex mb-6 bg-gray-100 rounded-lg p-1">
