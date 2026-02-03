@@ -87,9 +87,9 @@ const CompradorDashboard = () => {
         <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6" data-testid="subscription-banner">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-green-800 font-semibold">✓ Assinatura {subscription.plano_nome} Ativa</p>
+              <p className="text-green-800 font-semibold">✓ Plano {subscription.plano_nome} Ativo - Lojista Profissional</p>
               <p className="text-green-600 text-sm">
-                Acesso a até {subscription.limite_veiculos === 999999 ? 'TODOS' : subscription.limite_veiculos} veículos • 
+                Acesso a até {subscription.limite_veiculos === 999999 ? 'TODOS' : subscription.limite_veiculos} veículos de particulares • 
                 Vence em {diasRestantes} dias ({vencimento.toLocaleDateString('pt-BR')})
               </p>
             </div>
@@ -101,9 +101,9 @@ const CompradorDashboard = () => {
         <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-6" data-testid="no-subscription-banner">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-orange-800 font-semibold">⚠️ Sem Assinatura Ativa</p>
+              <p className="text-orange-800 font-semibold">⚠️ Assinatura Necessária para Lojistas</p>
               <p className="text-orange-600 text-sm">
-                Você pode ver veículos e preços, mas precisa de uma assinatura para acessar dados dos vendedores
+                Você pode visualizar veículos e preços, mas precisa de uma assinatura ativa para acessar contatos dos vendedores e fechar negócios
               </p>
             </div>
             <button
