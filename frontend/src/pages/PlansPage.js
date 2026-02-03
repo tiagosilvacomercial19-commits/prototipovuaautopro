@@ -114,22 +114,26 @@ const PlansPage = () => {
                       <span className="text-green-500 mr-2">✓</span>
                       <span>
                         {plan.limite_veiculos === 999999 
-                          ? 'Acesso a TODOS os veículos'
-                          : `Até ${plan.limite_veiculos} veículos`}
+                          ? 'Acesso ILIMITADO a veículos'
+                          : `Até ${plan.limite_veiculos} veículos por mês`}
                       </span>
                     </li>
                     <li className="flex items-center text-gray-700">
                       <span className="text-green-500 mr-2">✓</span>
-                      <span>Dados completos dos vendedores</span>
+                      <span>Contato direto com vendedores (WhatsApp, telefone, email)</span>
                     </li>
                     <li className="flex items-center text-gray-700">
                       <span className="text-green-500 mr-2">✓</span>
-                      <span>Renovação mensal</span>
+                      <span>Preços com margem para revenda</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <span className="text-green-500 mr-2">✓</span>
+                      <span>Renovação mensal automática</span>
                     </li>
                     {plan.tem_negociador && (
                       <li className="flex items-center text-gray-700 font-semibold">
-                        <span className="text-orange-500 mr-2">★</span>
-                        <span>Negociador presencial incluso!</span>
+                        <span className="text-orange-500 mr-2">⭐</span>
+                        <span>Negociador presencial exclusivo para fechar negócios!</span>
                       </li>
                     )}
                   </ul>
