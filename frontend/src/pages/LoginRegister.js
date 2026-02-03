@@ -144,7 +144,7 @@ const LoginRegister = () => {
         <div className="flex mb-6 bg-gray-100 rounded-lg p-1">
           <button
             onClick={() => setIsLogin(true)}
-            className={`flex-1 py-2 rounded-md font-medium transition-all ${
+            className={`flex-1 py-3 rounded-md font-medium transition-all ${
               isLogin ? 'bg-orange-600 text-white shadow-md' : 'text-gray-600 hover:text-gray-800'
             }`}
             data-testid="login-tab"
@@ -153,13 +153,25 @@ const LoginRegister = () => {
           </button>
           <button
             onClick={() => setIsLogin(false)}
-            className={`flex-1 py-2 rounded-md font-medium transition-all ${
+            className={`flex-1 py-3 rounded-md font-medium transition-all ${
               !isLogin ? 'bg-orange-600 text-white shadow-md' : 'text-gray-600 hover:text-gray-800'
             }`}
             data-testid="register-tab"
           >
             Cadastrar
           </button>
+        </div>
+
+        {/* Welcome Message */}
+        <div className="mb-6 text-center md:text-left">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            {isLogin ? 'Bem-vindo de volta!' : 'Crie sua conta'}
+          </h2>
+          <p className="text-gray-600 text-sm">
+            {isLogin 
+              ? 'Entre com suas credenciais para acessar sua conta' 
+              : 'Junte-se a milhares de usuários no ViaAutoPro'}
+          </p>
         </div>
 
         {/* Form */}
