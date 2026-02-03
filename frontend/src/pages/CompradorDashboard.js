@@ -108,10 +108,10 @@ const CompradorDashboard = () => {
             </div>
             <button
               onClick={() => navigate('/planos')}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-bold transition-colors shadow-lg"
               data-testid="subscribe-button"
             >
-              Ver Planos
+              📋 Ver Planos e Assinar
             </button>
           </div>
         </div>
