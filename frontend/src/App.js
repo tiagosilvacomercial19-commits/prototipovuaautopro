@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import '@/App.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginRegister from '@/pages/LoginRegister';
@@ -10,7 +10,7 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 // Auth Context
-export const AuthContext = React.createContext();
+export const AuthContext = createContext();
 
 function App() {
   const [user, setUser] = useState(null);
