@@ -277,6 +277,7 @@ const LoginRegister = () => {
           >
             {loading ? 'Processando...' : isLogin ? 'Entrar' : 'Cadastrar'}
           </button>
+        </form>
 
           {/* Additional Info */}
           {isLogin ? (
