@@ -229,9 +229,14 @@ const LoginRegister = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   data-testid="role-select"
                 >
-                  <option value="comprador">🛒 Comprador</option>
-                  <option value="vendedor">🔧 Vendedor</option>
+                  <option value="comprador">💼 Lojista (Comprador Profissional)</option>
+                  <option value="vendedor">🚙 Vendedor (Particular)</option>
                 </select>
+                <p className="text-xs text-gray-500 mt-1">
+                  {formData.role === 'comprador' 
+                    ? 'Lojistas pagam assinatura para acessar contatos dos vendedores' 
+                    : 'Vendedores cadastram GRÁTIS e recebem propostas de lojistas'}
+                </p>
               </div>
             </>
           )}
