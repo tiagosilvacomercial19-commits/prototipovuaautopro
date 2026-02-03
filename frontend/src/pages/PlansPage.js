@@ -79,8 +79,9 @@ const PlansPage = () => {
       
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4" data-testid="plans-title">Escolha Seu Plano</h1>
-          <p className="text-xl text-gray-600">Acesse todos os veículos e dados dos vendedores</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4" data-testid="plans-title">Planos para Lojistas Profissionais</h1>
+          <p className="text-xl text-gray-600">Acesse contatos de vendedores particulares e compre veículos com margem de revenda</p>
+          <p className="text-sm text-gray-500 mt-2">💼 Ideal para revendas, concessionárias e lojistas do setor automotivo</p>
         </div>
 
         {loading ? (
