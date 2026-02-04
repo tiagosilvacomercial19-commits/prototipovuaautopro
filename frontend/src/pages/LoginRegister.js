@@ -10,7 +10,8 @@ const LoginRegister = () => {
     nome: '',
     telefone: '',
     whatsapp: '',
-    role: 'comprador'
+    role: 'comprador',
+    aceitou_termos: false
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
