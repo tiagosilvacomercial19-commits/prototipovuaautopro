@@ -287,20 +287,6 @@ const VendedorDashboard = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Preço Anunciado (R$) *</label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    value={formData.preco}
-                    onChange={(e) => setFormData({ ...formData, preco: e.target.value })}
-                    placeholder="69900.00"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    data-testid="vehicle-preco-input"
-                  />
-                  <p className="text-xs text-gray-500 mt-1">Preço que será mostrado aos lojistas</p>
-                </div>
-                <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Preço Mínimo Aceito (R$)</label>
                   <input
                     type="number"
@@ -312,19 +298,18 @@ const VendedorDashboard = () => {
                   />
                   <p className="text-xs text-gray-500 mt-1">Valor mínimo para fechar negócio (opcional)</p>
                 </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Margem Sugerida (%)</label>
-                <input
-                  type="number"
-                  step="0.1"
-                  value={formData.margem_sugerida}
-                  onChange={(e) => setFormData({ ...formData, margem_sugerida: e.target.value })}
-                  placeholder="15"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-                <p className="text-xs text-gray-500 mt-1">Percentual de margem que você deixa para o lojista revender (recomendado: 15-20%)</p>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Margem Sugerida (%)</label>
+                  <input
+                    type="number"
+                    step="0.1"
+                    value={formData.margem_sugerida}
+                    onChange={(e) => setFormData({ ...formData, margem_sugerida: e.target.value })}
+                    placeholder="15"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">% de margem para revenda (recomendado: 15-20%)</p>
+                </div>
               </div>
 
               <div>
