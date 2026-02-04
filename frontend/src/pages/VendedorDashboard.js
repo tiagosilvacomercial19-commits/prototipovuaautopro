@@ -416,6 +416,8 @@ const VendedorDashboard = () => {
           </div>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 };
