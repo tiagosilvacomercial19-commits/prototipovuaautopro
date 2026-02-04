@@ -105,22 +105,13 @@ class Vehicle(BaseModel):
     vendedor_email: str
     status: str = VehicleStatus.PENDENTE
     created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
-    nome: str
-    preco: float
-    imagem_base64: str
-    descricao: str
-    vendedor_id: str
-    vendedor_nome: str
-    vendedor_telefone: str
-    vendedor_whatsapp: str
-    vendedor_email: str
-    status: str = VehicleStatus.PENDENTE
-    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 class VehiclePublic(BaseModel):
     id: str
     nome: str
     preco: float
+    valor_fipe: Optional[float] = None
+    margem_sugerida: Optional[float] = None
     imagem_base64: str
     descricao: str
     status: str
