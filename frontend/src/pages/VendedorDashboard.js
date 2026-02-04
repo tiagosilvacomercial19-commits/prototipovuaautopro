@@ -10,10 +10,11 @@ const VendedorDashboard = () => {
   const [formData, setFormData] = useState({
     nome: '',
     preco: '',
-    descricao: '',
-    imagem_base64: '',
+    valor_fipe: '',
     preco_minimo: '',
-    margem_sugerida: ''
+    margem_sugerida: '',
+    descricao: '',
+    imagem_base64: ''
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
