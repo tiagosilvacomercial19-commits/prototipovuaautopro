@@ -93,6 +93,12 @@ function App() {
               <Navigate to="/dashboard" />
             } />
             
+            {/* Páginas Jurídicas */}
+            <Route path="/termos-de-uso" element={<TermosDeUso />} />
+            <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+            <Route path="/politica-cadastro" element={<PoliticaCadastro />} />
+            <Route path="/politica-assinatura" element={<PoliticaAssinatura />} />
+            
             <Route path="/" element={<Navigate to={user ? "/dashboard" : "/login"} />} />
           </Routes>
         </BrowserRouter>
