@@ -163,6 +163,8 @@ const CompradorDashboard = () => {
           }}
         />
       )}
+
+      <Footer />
     </div>
   );
 };
