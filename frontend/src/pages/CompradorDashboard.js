@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import VehicleCard from '@/components/VehicleCard';
 import NegotiateModal from '@/components/NegotiateModal';
+import Footer from '@/components/Footer';
 
 const CompradorDashboard = () => {
   const { user, token, API } = useContext(AuthContext);
