@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold" data-testid="header-logo">ViaAutoPro</h1>
-            <p className="text-orange-100 text-sm">Portal de Veículos</p>
+            <p className="text-orange-100 text-sm">Marketplace B2B de Veículos</p>
           </div>
 
           <div className="flex items-center gap-4">
