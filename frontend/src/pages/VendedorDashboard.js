@@ -367,13 +367,13 @@ const VendedorDashboard = () => {
         ) : vehicles.length === 0 ? (
           <div className="bg-white rounded-xl shadow-lg p-12 text-center">
             <div className="text-6xl mb-4">🚗</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Nenhum veículo cadastrado</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Nenhum anúncio cadastrado</h3>
             <p className="text-gray-600 mb-4">Comece adicionando seu primeiro veículo para alcançar lojistas de todo o Brasil!</p>
             <button
               onClick={() => setShowForm(true)}
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg"
             >
-              Adicionar Primeiro Veículo
+              Adicionar Primeiro Anúncio
             </button>
           </div>
         ) : (
