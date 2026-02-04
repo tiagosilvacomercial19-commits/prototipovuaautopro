@@ -218,7 +218,7 @@ const VendedorDashboard = () => {
 
         {/* Add Vehicle Button */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Lista de Veículos</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Lista de Anúncios</h2>
           <button
             onClick={() => setShowForm(!showForm)}
             className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg flex items-center gap-2"
