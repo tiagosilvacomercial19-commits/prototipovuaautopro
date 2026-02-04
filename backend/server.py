@@ -122,6 +122,14 @@ class VehicleDetailed(BaseModel):
     nome: str
     preco: float
     imagem_base64: str
+class VehicleDetailed(BaseModel):
+    id: str
+    nome: str
+    preco: float
+    valor_fipe: Optional[float] = None
+    preco_minimo: Optional[float] = None
+    margem_sugerida: Optional[float] = None
+    imagem_base64: str
     descricao: str
     vendedor_nome: str
     vendedor_telefone: str
