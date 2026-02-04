@@ -69,7 +69,7 @@ const VendedorDashboard = () => {
       });
 
       if (response.ok) {
-        setFormData({ nome: '', preco: '', descricao: '', imagem_base64: '', preco_minimo: '', margem_sugerida: '' });
+        setFormData({ nome: '', preco: '', valor_fipe: '', preco_minimo: '', margem_sugerida: '', descricao: '', imagem_base64: '' });
         setShowForm(false);
         fetchMyVehicles();
         alert('✅ Veículo cadastrado! Aguardando aprovação do moderador.');
