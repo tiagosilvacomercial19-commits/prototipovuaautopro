@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '@/App';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const VendedorDashboard = () => {
   const { user, token, API } = useContext(AuthContext);
