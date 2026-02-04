@@ -83,11 +83,28 @@ class UserResponse(BaseModel):
 class VehicleCreate(BaseModel):
     nome: str
     preco: float
+    valor_fipe: Optional[float] = None
+    preco_minimo: Optional[float] = None
+    margem_sugerida: Optional[float] = None
     imagem_base64: str
     descricao: Optional[str] = ""
 
 class Vehicle(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    nome: str
+    preco: float
+    valor_fipe: Optional[float] = None
+    preco_minimo: Optional[float] = None
+    margem_sugerida: Optional[float] = None
+    imagem_base64: str
+    descricao: str
+    vendedor_id: str
+    vendedor_nome: str
+    vendedor_telefone: str
+    vendedor_whatsapp: str
+    vendedor_email: str
+    status: str = VehicleStatus.PENDENTE
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     nome: str
     preco: float
     imagem_base64: str
