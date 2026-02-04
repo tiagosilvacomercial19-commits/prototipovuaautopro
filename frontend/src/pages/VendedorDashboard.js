@@ -128,7 +128,7 @@ const VendedorDashboard = () => {
           <div className="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-600 text-sm font-medium">Total de Veículos</p>
+                <p className="text-gray-600 text-sm font-medium">Total de Anúncios</p>
                 <p className="text-3xl font-bold text-gray-800 mt-1">{stats.total}</p>
               </div>
               <div className="bg-blue-100 rounded-full p-3">
