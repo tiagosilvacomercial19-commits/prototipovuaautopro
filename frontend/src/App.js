@@ -5,6 +5,10 @@ import LoginRegister from '@/pages/LoginRegister';
 import VendedorDashboard from '@/pages/VendedorDashboard';
 import CompradorDashboard from '@/pages/CompradorDashboard';
 import PlansPage from '@/pages/PlansPage';
+import TermosDeUso from '@/pages/legal/TermosDeUso';
+import PoliticaPrivacidade from '@/pages/legal/PoliticaPrivacidade';
+import PoliticaCadastro from '@/pages/legal/PoliticaCadastro';
+import PoliticaAssinatura from '@/pages/legal/PoliticaAssinatura';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
