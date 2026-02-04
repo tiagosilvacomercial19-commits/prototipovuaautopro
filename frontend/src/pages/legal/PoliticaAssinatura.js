@@ -4,7 +4,7 @@ const PoliticaAssinatura = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <header className="bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="max-w-7xl mx-auto px-4 py-6"><div className="flex items-center justify-between"><div>
           <h1 className="text-3xl font-bold">Política de Assinatura e Pagamento</h1>
         </div>
       </header>
