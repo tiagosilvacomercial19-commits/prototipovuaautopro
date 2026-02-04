@@ -238,6 +238,26 @@ async def check_active_subscription(current_user: dict = Depends(get_current_use
 async def root():
     return {"message": "ViaAutoPro API"}
 
+# Health Check
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Kubernetes liveness/readiness probes"""
+    try:
+        # Test MongoDB connection
+        await db.command('ping')
+        return {
+            "status": "healthy",
+            "service": "ViaAutoPro API",
+            "database": "connected"
+        }
+    except Exception as e:
+        return {
+            "status": "unhealthy",
+            "service": "ViaAutoPro API",
+            "database": "disconnected",
+            "error": str(e)
+        }
+
 # ==================== AUTH ====================
 
 @api_router.post("/auth/register")
