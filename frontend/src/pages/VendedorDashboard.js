@@ -119,8 +119,8 @@ const VendedorDashboard = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2" data-testid="dashboard-title">Meus Veículos</h1>
-          <p className="text-gray-600">Gerencie seus anúncios e acompanhe suas oportunidades de venda</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2" data-testid="dashboard-title">Meus Anúncios</h1>
+          <p className="text-gray-600">Gerencie seus anúncios de veículos e acompanhe suas oportunidades de venda</p>
         </div>
 
         {/* Statistics Cards */}
