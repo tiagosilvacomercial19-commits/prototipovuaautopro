@@ -239,6 +239,29 @@ const LoginRegister = () => {
                     : 'Vendedores cadastram GRÁTIS e recebem propostas de lojistas'}
                 </p>
               </div>
+
+              {/* Checkbox Termos */}
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  name="aceitou_termos"
+                  checked={formData.aceitou_termos}
+                  onChange={(e) => setFormData({ ...formData, aceitou_termos: e.target.checked })}
+                  required
+                  className="mt-1 h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                  data-testid="termos-checkbox"
+                />
+                <label className="ml-2 text-sm text-gray-700">
+                  Li e concordo com os{' '}
+                  <a href="/termos-de-uso" target="_blank" className="text-orange-600 hover:text-orange-700 font-medium underline">
+                    Termos de Uso
+                  </a>
+                  {' '}e{' '}
+                  <a href="/politica-privacidade" target="_blank" className="text-orange-600 hover:text-orange-700 font-medium underline">
+                    Política de Privacidade
+                  </a>
+                </label>
+              </div>
             </>
           )}
 
